@@ -7,6 +7,7 @@
 package com.gramman75.demoSpringCore;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.MessageSource;
@@ -24,7 +25,12 @@ public class DemoSpringCoreApplication {
 //		new SpringApplicationBuilder(DemoSpringCoreApplication.class)
 //			.properties("classpath:/app.properties")
 //			.build().run(args);
-		SpringApplication.run(DemoSpringCoreApplication.class, args);
+		
+		SpringApplication app = new SpringApplication(DemoSpringCoreApplication.class);
+		app.setWebApplicationType(WebApplicationType.NONE);
+		app.run(args);
+		
+//		SpringApplication.run(DemoSpringCoreApplication.class, args);
 	}
 	
 	@Bean
