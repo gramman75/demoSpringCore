@@ -1,4 +1,4 @@
-package com.gramman75.demoSpringCore.SpringAOP;
+package com.gramman75.demoSpringCore.ProxyAOP;
 
 import org.springframework.stereotype.Component;
 
